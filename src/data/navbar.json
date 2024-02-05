@@ -1,0 +1,24 @@
+{
+    "navItems": [
+        {
+            "name": "Home",
+            "url": "/"
+        },
+        {
+            "name": "Showcases",
+            "url": "/showcases"
+        },
+        {
+            "name": "About",
+            "url": "/about"
+        },
+        {
+            "name": "Portfolio",
+            "url": "/portfolio"
+        },
+        {
+            "name": "Contact",
+            "url": "/contact"
+        }
+    ]
+}

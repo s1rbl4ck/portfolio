@@ -1,0 +1,11 @@
+{
+    "name": "Danesh Habibi",
+    "profession": "Front-end Developer",
+    "email": "s1rbl4ck@protonmail.com",
+    "socials": [
+        {"name": "Github", "url": "https://github.com/s1rbl4ck"},
+        {"name": "Linkedin", "url": "https://linkedin.com/in/daneshhabibi"},
+        {"name": "Instagram", "url": "https://instagram.com/s1rbl4ck"},
+        {"name": "Twitter", "url": "https://twitter.com/s1rbl4ck"}
+    ]
+}
