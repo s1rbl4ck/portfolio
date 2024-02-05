@@ -3,14 +3,16 @@ import React from "react";
 import Head from "next/head";
 
 const LightTheme = ({ children, bdOn }) => {
-  if (bdOn) {
-    React.useEffect(() => {
+  
+  React.useEffect(() => {
+      if (bdOn) {
       document.querySelector("body").classList.add("bd-dark");
       return () => {
         document.querySelector("body").classList.remove("bd-dark");
       };
-    });
-  }
+    }
+  });
+  
   return (
     <>
       <Head>
