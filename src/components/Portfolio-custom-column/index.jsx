@@ -3,7 +3,7 @@ import React from "react";
 import Split from "../Split";
 import Link from "next/link";
 import initIsotope from "../../common/initIsotope";
-import portfolio1Data from "../../data/sections/portfolio1.json";
+import portfolioData from "../../data/portfolio.json";
 
 const PortfolioCustomColumn = ({
   column,
@@ -11,6 +11,7 @@ const PortfolioCustomColumn = ({
   hideFilter,
   hideSectionTitle,
 }) => {
+  const {projects} = portfolioData;
   const [pageLoaded, setPageLoaded] = React.useState(false);
   React.useEffect(() => {
     setPageLoaded(true);
@@ -62,7 +63,7 @@ const PortfolioCustomColumn = ({
           )}
 
           <div className="gallery full-width">
-            {portfolio1Data.map((item, index) => (
+            {projects.map((item, index) => (
               <div
                 key={item.id}
                 className={`${
@@ -81,7 +82,7 @@ const PortfolioCustomColumn = ({
                 data-wow-delay=".4s"
               >
                 <div className="item-img">
-                  <Link href="/project-details2/project-details2-dark">
+                  <Link href={`/portfolio/${item.slug}`} passHref>
                     <span className="imago wow">
                       <img src={item.image} alt="image" />
                       <div className="item-img-overlay"></div>

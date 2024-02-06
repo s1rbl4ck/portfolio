@@ -1,0 +1,64 @@
+{
+    "name": "Danesh Habibi",
+    "desc": "My mission is develop the best platforms around.",
+    "about": "Hello, I'm Danesh Habibi, a front-end developer with over 3 years of experience in web development and design, I bring a unique blend of technical expertise, creativity and problem-solving skills to every project. My ability to learn quickly and thrive in fast-paced environments has enabled me to deliver innovative solutions across diverse industries. My expertise in Front-end development includes extensive experience with React, Redux, Next.js, and Back-end development such as Php, Laravel, Restful API. I have gained valuable experience as both a team member and leader, having fully developed several projects. I am passionate about using my skills to drive business growth and excited to take on new challenges to gain valuable experiences in the field of computer engineering.",
+    "profession": "Front-end Developer",
+    "email": "s1rbl4ck@protonmail.com",
+    "cv": {
+        "url": "https://drive.google.com/file/d/1b8Nufr_bHnV8YNHe9ZZbuTG_kiZQNn9P/view?usp=sharing"
+    },
+    "certificates": [
+        {
+            "title": "Front-End Web Development with React",
+            "url": "https://www.coursera.org/account/accomplishments/certificate/2D2YVHQESQCW",
+            "date": "May 2022",
+            "credential": "2D2YVHQESQCW"
+        },
+        {
+            "title": "Introduction to Git and GitHub",
+            "url": "https://www.coursera.org/account/accomplishments/certificate/XVF4PD8CTTUU",
+            "date": "August 2022",
+            "credential": "XVF4PD8CTTUU"
+        },
+        {
+            "title": "Linux for Developers",
+            "url": "https://www.coursera.org/account/accomplishments/certificate/DBSLZ4ZWXQ2N",
+            "date": "October 2022",
+            "credential": "DBSLZ4ZWXQ2N"
+        },
+        {
+            "title": "Introduction to Java and Object-Oriented",
+            "url": "https://www.coursera.org/account/accomplishments/certificate/5U26JHBS8LNA",
+            "date": "November 2023",
+            "credential": "5U26JHBS8LNA"
+        }
+    ],
+    "skills": [
+        { "title": "Software Development", "value": 40 },
+        { "title": "Cyber Security", "value": 20 }
+    ],
+    "socials": [
+        { "id": 1, "name": "Github", "url": "https://github.com/s1rbl4ck" },
+        {
+            "id": 2,
+            "name": "Linkedin",
+            "url": "https://linkedin.com/in/daneshhabibi"
+        },
+        {
+            "id": 3,
+            "name": "Instagram",
+            "url": "https://instagram.com/s1rbl4ck"
+        },
+        { "id": 4, "name": "Twitter", "url": "https://twitter.com/s1rbl4ck" }
+    ],
+    "projects": [
+        {
+            "id": 1,
+            "image": "/img/showcases/01.jpg",
+            "slug": "atebairani",
+            "title": "Full Stack Education Platform",
+            "tags": ["Design", "Web Development", "Frontend", "backend"],
+            "filterCategory": ["web"]
+        }
+    ]
+}

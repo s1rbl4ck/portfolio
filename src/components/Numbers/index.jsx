@@ -1,6 +1,6 @@
 import React from "react";
 import CountUp from "react-countup";
-import numbers1Data from "../../data/sections/numbers1.json";
+import numbersData from "../../data/numbers.json";
 import Split from "../Split";
 import VisibilitySensor from "react-visibility-sensor";
 
@@ -9,7 +9,7 @@ const Numbers1 = () => {
     <section className="number-sec section-padding sub-bg">
       <div className="container">
         <div className="row">
-          {numbers1Data.map((item) => (
+          {numbersData.map((item) => (
             <div className="col-lg-3 col-md-6" key={item.id}>
               <div className={`item ${item.id == 1 ? "no-bord" : ""}`}>
                 <span className={`icon ${item.icon}`}></span>

@@ -1,8 +1,9 @@
 import React from "react";
 import Split from "../Split";
-import services4Data from "../../data/sections/services4.json";
+import servicesData from "../../data/services.json";
 
 const Services4 = ({ withBG, withPadding, halfBG, withOutTitle }) => {
+
   return (
     <section
       className={`services ${withPadding ? "section-padding" : ""} ${
@@ -24,19 +25,19 @@ const Services4 = ({ withBG, withPadding, halfBG, withOutTitle }) => {
           </div>
         )}
         <div className="row">
-          {services4Data.map((item, index) => (
-            <div className="col-lg-4" key={item.id}>
+          {servicesData.map((service, index) => (
+            <div className="col-lg-4" key={service.id}>
               <div
                 className={`item ${
-                  index != services4Data.length - 1 ? "md-mb50" : ""
+                  index != servicesData.length - 1 ? "md-mb50" : ""
                 } wow fadeInUp`}
                 data-wow-delay={
-                  item.id == 1 ? ".5s" : item.id == 2 ? ".3s" : ".8s"
+                  service.id == 1 ? ".5s" : service.id == 2 ? ".3s" : ".8s"
                 }
               >
-                <span className={`icon ${item.icon}`}></span>
-                <h6>{item.title}</h6>
-                <p>{item.content}</p>
+                <span className={`icon ${service.icon}`}></span>
+                <h6>{service.title}</h6>
+                <p>{service.content}</p>
               </div>
             </div>
           ))}

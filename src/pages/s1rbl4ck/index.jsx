@@ -1,5 +1,6 @@
 import React from "react";
-import AboutWithSkills from "../../components/About-with-skills";
+import AboutUs2 from "../../components/About-us2";
+// import AboutWithSkills from "../../components/About-with-skills";
 import Footer from "../../components/Footer";
 import IntroTxt from "../../components/Intro-txt";
 import Navbar from "../../components/Navbar";
@@ -36,7 +37,7 @@ const Main = () => {
     <DarkTheme>
       <Navbar nr={navbarRef} lr={logoRef} />
       <IntroTxt subBG />
-      <AboutWithSkills />
+      <AboutUs2 skillsTheme="dark" />
       <Services4 halfBG />
       <Numbers1 />
       <PortfolioCustomColumn column={2} filterPosition="left" />

@@ -2,9 +2,12 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
 import appData from "../../data/app.json";
-import information from "../../data/information.json";
+import portfolioData from "../../data/portfolio.json";
 
 const Footer = () => {
+
+  const {email, socials} = portfolioData;
+
   function validateEmail(value) {
     let error;
     if (!value) {
@@ -29,14 +32,14 @@ const Footer = () => {
               <div className="con-info custom-font">
                 <ul>
                   <li>
-                    <span>Email : </span> {information.email}
+                    <span>Email : </span> {email}
                   </li>
                 </ul>
               </div>
               <div className="social-icon">
                 <h6 className="custom-font stit simple-btn">Follow Me</h6>
                 <div className="social">
-                  {information.socials.map((social, i) => (
+                  {socials.map((social, i) => (
                     <a href={social.url} className="icon" key={i}>
                       <i className={`fab fa-${social.name.toLowerCase()}`}></i>
                     </a>

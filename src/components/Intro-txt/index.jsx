@@ -1,7 +1,9 @@
 import React from "react";
-import data from "../../data/information.json";
+import portfolioData from "../../data/portfolio.json";
 
 const IntroTxt = ({subBG}) => {
+  const {name, profession, socials} = portfolioData;
+  
   return (
     <header
       className={`freelancer ${subBG ? "sub-bg" : ""} valign bg-img parallaxie`}
@@ -13,10 +15,10 @@ const IntroTxt = ({subBG}) => {
           <div className="col-lg-6">
             <div className="cont">
               <h6>Hello, I&apos;m</h6>
-              <h1>{data.name}</h1>
-              <h4>{data.profession}</h4>
+              <h1>{name}</h1>
+              <h4>{profession}</h4>
               <div className="social-icon">
-                {data.socials.map((social, i) => (
+                {socials.map((social, i) => (
                   <a href={social.url} key={i} target="_blank" rel="noreferrer" className="icon">
                     <i className={`fab fa-${social.name.toLowerCase()}`}></i>
                   </a>

@@ -1,8 +1,10 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
-import information from '../../data/information.json';
+import portfolioData from '../../data/portfolio.json';
 
 const ContactWithMap = () => {
+  const {email, socials} = portfolioData;
+
   const messageRef = React.useRef(null);
   function validateEmail(value) {
     let error;
@@ -103,7 +105,7 @@ const ContactWithMap = () => {
                 </h3>
                 <div className="item mb-40">
                   <h5>
-                    <a href="#0">{information.email}</a>
+                    <a href="#0">{email}</a>
                   </h5>
                   {/* <h5></h5> */}
                 </div>
@@ -118,7 +120,7 @@ const ContactWithMap = () => {
                   </h6>
                 </div> */}
                 <div className="social mt-50">
-                  {information.socials.map((social, i) => (
+                  {socials.map((social, i) => (
                     <a href={social.url} className="icon" key={i}>
                       <i className={`fab fa-${social.name.toLowerCase()}`}></i>
                     </a>

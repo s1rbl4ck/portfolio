@@ -4,8 +4,13 @@ import Link from "next/link";
 import Split from "../Split";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import portfolioData from "../../data/portfolio.json";
+import Image from "next/image";
 
 const AboutUs2 = ({ skillsTheme }) => {
+
+  const {desc, about, cv, skills} = portfolioData;
+  
   const cpStyle = {
     path: {
       stroke: "#75dab4",
@@ -39,68 +44,42 @@ const AboutUs2 = ({ skillsTheme }) => {
                   className="co-tit custom-font wow words chars splitting"
                   data-splitting
                 >
-                  Our 20 years working experience make a different business
-                  agency services.
+                  {desc}
                 </h3>
               </Split>
               <p className="wow fadeInUp" data-wow-delay=".4s">
-                We are s1rbl4ck. We create award-winning websites, remarkable brands
-                and cutting-edge apps.Nullam imperdiet, sem at fringilla
-                lobortis, sem nibh fringilla nibh, id gravida mi purus sit amet
-                erat. Ut dictum nisi masvitp.
-              </p>
-              <p className="mt-10 wow fadeInUp" data-wow-delay=".4s">
-                Nulla metus metus ullamcorper vel tincidunt sed euismod nibh
-                volutpat velit class aptent taciti sociosqu ad litora.
+                {about}
               </p>
               <Split>
-                <Link href="/about/about-dark">
-                  <span
-                    className="words chars splitting simple-btn custom-font mt-30 wow"
-                    data-splitting
-                  >
-                    <span>Know More</span>
-                  </span>
-                </Link>
+                <a href={cv.url} className="simple-btn mt-40" target="_blank" rel="noreferrer">
+                  Download C.V
+                </a>
               </Split>
             </div>
           </div>
           <div className="col-lg-6">
             <div className="blc-img">
               <div className="bimg wow imago">
-                <img src="/img/intro/3.jpg" alt="" />
+                <Image width="720" height="480" src="/img/about.jpg" alt="" />
               </div>
               <div className="skills-circle wow fadeInUp" data-wow-delay=".8">
-                <div className="item">
-                  <div className="skill">
-                    <CircularProgressbar
-                      value={90}
-                      className="custom-font"
-                      strokeWidth={2}
-                      text={`${90}%`}
-                      styles={cpStyle}
-                    />
+                {skills.map((skill, i) => (
+                  <div className="item" key={i}>
+                    <div className="skill">
+                      <CircularProgressbar
+                        value={skill.value}
+                        strokeWidth={2}
+                        className="custom-font"
+                        text={`${skill.value}%`}
+                        styles={cpStyle}
+                      />
+                    </div>
+                    <div className="cont">
+                      {skill.title}
+                    </div>
                   </div>
-                  <div className="cont">
-                    <span>Project</span>
-                    <h6>Consulting</h6>
-                  </div>
-                </div>
-                <div className="item">
-                  <div className="skill">
-                    <CircularProgressbar
-                      value={75}
-                      strokeWidth={2}
-                      className="custom-font"
-                      text={`${75}%`}
-                      styles={cpStyle}
-                    />
-                  </div>
-                  <div className="cont">
-                    <span>App</span>
-                    <h6>Development</h6>
-                  </div>
-                </div>
+                ))}
+
               </div>
             </div>
           </div>

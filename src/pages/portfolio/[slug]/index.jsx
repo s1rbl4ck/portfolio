@@ -1,13 +1,13 @@
 import React from "react";
-import DarkTheme from "../../layouts/Dark";
-import Navbar from "../../components/Navbar";
-import ProjectDetails2Header from "../../components/Project-details2-header";
-import ProjectDetails2Introduction from "../../components/Project-details2-introduction";
-import ProjectDetails2Images from "../../components/Project-details2-images";
-import ProjectDetailsDescription from "../../components/Project-details-description";
-import ProjectDetailsVideo from "../../components/Project-details-video";
-import NextProject from "../../components/Next-project";
-import SmallFooter from "../../components/Small-footer";
+import DarkTheme from "../../../layouts/Dark";
+import Navbar from "../../../components/Navbar";
+import ProjectDetails2Header from "../../../components/Project-details2-header";
+import ProjectDetails2Introduction from "../../../components/Project-details2-introduction";
+import ProjectDetails2Images from "../../../components/Project-details2-images";
+import ProjectDetailsDescription from "../../../components/Project-details-description";
+import ProjectDetailsVideo from "../../../components/Project-details-video";
+import NextProject from "../../../components/Next-project";
+import SmallFooter from "../../../components/Small-footer";
 
 const ProjectDetails2Dark = () => {
     const navbarRef = React.useRef(null);
