@@ -5,6 +5,8 @@ import Cursor from "../components/Cursor";
 import ScrollToTop from "../components/Scroll-to-top";
 import LoadingScreen from "../components/Loading-Screen";
 import "../styles/globals.css";
+import "../../public/css/dark.css";
+import "../../public/css/styles.css";
 
 function MyApp({ Component, pageProps }) {
   return (

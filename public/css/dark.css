@@ -1598,7 +1598,6 @@ body {
   background: transparent;
   border-bottom: 2px solid transparent;
   z-index: 999;
-  min-height: 80px;
 }
 .navbar .icon-bar {
   color: #fff;
@@ -1716,8 +1715,8 @@ body {
   opacity: 1;
   cursor: pointer;
 }
-.navbar .logo {
-  width: 50px;
+.nav-logo {
+  width: 70px;
 }
 
 .nav-scroll {
@@ -1735,57 +1734,30 @@ body {
   -ms-transform: translateY(80px);
   transform: translateY(80px);
 }
-
-.topnav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999999;
-  padding: 30px 0;
-  color: #fff;
-  -webkit-transition: all 0.7s;
-  -o-transition: all 0.7s;
-  transition: all 0.7s;
-}
-.topnav .container,
-.topnav .container-fluid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.topnav .container-fluid {
-  padding: 0 50px;
-}
-.topnav .logo {
-  width: 50px;
-}
-.topnav .menu-icon {
+.navbar .menu-icon {
   margin-left: auto;
   cursor: pointer;
 }
-.topnav .menu-icon:hover .text .char {
+.navbar .menu-icon:hover .text .char {
   -webkit-animation: fadeInUp 0.3s cubic-bezier(0.3, 0, 0.7, 1) both;
   animation: fadeInUp 0.3s cubic-bezier(0.3, 0, 0.7, 1) both;
   -webkit-animation-delay: calc(30ms * var(--char-index));
   animation-delay: calc(30ms * var(--char-index));
 }
-.topnav .menu-icon .text {
+.navbar .menu-icon .text {
   font-size: 13px;
   font-weight: 500;
-  padding-left: 15px;
   display: table-cell;
   vertical-align: middle;
   position: relative;
 }
-.topnav .menu-icon .text:after {
+.navbar .menu-icon .text:after {
   content: "close";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  padding-left: 15px;
   opacity: 0;
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
@@ -1794,7 +1766,7 @@ body {
   -o-transition-delay: 0.4s;
   transition-delay: 0.4s;
 }
-.topnav .menu-icon .text .word {
+.navbar .menu-icon .text .word {
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s;
@@ -1802,38 +1774,38 @@ body {
   -o-transition-delay: 0.6s;
   transition-delay: 0.6s;
 }
-.topnav .menu-icon .text.open .word {
+.navbar .menu-icon .text.open .word {
   opacity: 0;
   -webkit-transition-delay: 0.4s;
   -o-transition-delay: 0.4s;
   transition-delay: 0.4s;
 }
-.topnav .menu-icon .text.open:after {
+.navbar .menu-icon .text.open:after {
   opacity: 1;
   -webkit-transition-delay: 0.6s;
   -o-transition-delay: 0.6s;
   transition-delay: 0.6s;
 }
-.topnav .menu-icon .icon {
+.navbar .menu-icon .icon {
   display: table-cell;
 }
-.topnav .menu-icon .icon i {
+.navbar .menu-icon .icon i {
   display: block;
   width: 20px;
   height: 3px;
   background: #fff;
   margin: 4px 0;
 }
-.topnav.dark .menu-icon {
+.navbar.dark .menu-icon {
   color: #000;
 }
-.topnav.dark .menu-icon .icon i {
+.navbar.dark .menu-icon .icon i {
   background: #000;
 }
-.topnav.dark.navlit .menu-icon {
+.navbar.dark.navlit .menu-icon {
   color: #fff;
 }
-.topnav.dark.navlit .menu-icon .icon i {
+.navbar.dark.navlit .menu-icon .icon i {
   background: #fff;
 }
 
@@ -1846,7 +1818,7 @@ body {
   background: #11141b;
   padding: 120px 30px 30px;
   overflow: hidden;
-  z-index: 9999;
+  z-index: 10;
   -webkit-transition: all 0.5s cubic-bezier(1, 0, 0.55, 1);
   -o-transition: all 0.5s cubic-bezier(1, 0, 0.55, 1);
   transition: all 0.5s cubic-bezier(1, 0, 0.55, 1);
@@ -5669,9 +5641,8 @@ body {
   .navbar .nav-link {
     margin: 10px auto !important;
   }
-  .navbar .logo {
-    margin-left: 15px;
-    width: 50px;
+  .nav-logo {
+    width: 70px;
   }
   .nav-scroll .navbar-collapse .nav-link,
   .light .navbar-collapse .nav-link {
@@ -5927,20 +5898,14 @@ body {
     right: 15px;
     bottom: 15px;
   }
-  .navbar .logo {
-    width: 40px;
+  .nav-logo {
+    width: 55px;
   }
   .hamenu .menu-links .main-menu > li {
     font-size: 24px;
   }
   .hamenu .menu-links .main-menu .sub-menu li {
     font-size: 18px;
-  }
-  .topnav .container-fluid {
-    padding: 0 30px;
-  }
-  .topnav .logo {
-    width: 40px;
   }
   .works-header {
     min-height: 60vh;
@@ -6080,9 +6045,6 @@ body {
   }
   .hamenu .menu-links .main-menu .sub-menu li {
     font-size: 16px;
-  }
-  .topnav .container-fluid {
-    padding: 0 15px;
   }
   .pages-header .cont .path {
     font-size: 15px;

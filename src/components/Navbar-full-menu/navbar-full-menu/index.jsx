@@ -6,6 +6,7 @@ import appData from "../../../data/app.json";
 import navbarData from "../../../data/navbar.json";
 import portfolioData from "../../../data/portfolio.json";
 import handleFullScreenNavbar from "../../../common/handleFullScreenNavbar";
+import NavbarLogo from "../../NavbarLogo/index.component";
 
 const NavbarFullMenu = ({ theme, lr }) => {
     const { navItems } = navbarData;
@@ -16,46 +17,6 @@ const NavbarFullMenu = ({ theme, lr }) => {
     }, []);
     return (
         <>
-            <div
-                id="navi"
-                className={`topnav ${
-                    theme ? (theme === "light" ? "light" : "") : ""
-                }`}
-            >
-                <div className="container-fluid">
-                    <div className="logo">
-                        <a href="#0">
-                            {theme ? (
-                                theme === "light" ? (
-                                    <img
-                                        src={`${appData.darkLogo}`}
-                                        alt="logo"
-                                    />
-                                ) : (
-                                    <img
-                                        src={`${appData.lightLogo}`}
-                                        alt="logo"
-                                    />
-                                )
-                            ) : (
-                                <img src={`${appData.lightLogo}`} alt="logo" />
-                            )}
-                        </a>
-                    </div>
-                    <div className="menu-icon">
-                        <span className="icon">
-                            <i></i>
-                            <i></i>
-                        </span>
-                        <Split>
-                            <span className="text" data-splitting>
-                                <span className="menu-text">Menu</span>
-                            </span>
-                        </Split>
-                    </div>
-                </div>
-            </div>
-
             <div className="hamenu">
                 <div className="container">
                     <div className="row">
