@@ -1,69 +1,32 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useEffect, useState } from "react";
-import { Formik, Form, Field } from "formik";
+import React from "react";
 import Link from "next/link";
-import appData from "../../data/app.json";
 import navbar from "../../data/navbar.json";
-import {
-    handleDropdown,
-    handleMobileDropdown,
-    handleSearch,
-} from "../../common/navbar";
-import useWindowDimensions from "../../hooks/useWindowDimensions";
 import NavbarFullMenu from "../Navbar-full-menu/navbar-full-menu";
+import NavbarLogo from "../NavbarLogo/index.component";
+import Split from "../Split";
 
 const Navbar = ({ lr, nr, theme }) => {
-    const [collapse, setCollapse] = useState(false);
-    const { width } = useWindowDimensions();
-
-    useEffect(() => {
-        if (width < 992) {
-            setCollapse(true);
-        } else {
-            setCollapse(false);
-        }
-    }, [width]);
-
-    return !collapse ? (
+    return (
         <nav
             ref={nr}
-            className={`navbar navbar-expand-lg change ${
+            className={`navbar navbar-expand-lg change fixed lg:absolute py-3 ${
                 theme === "themeL" ? "light" : ""
             }`}
         >
-            <div className="container">
-                <Link href="/">
-                    <span className="logo">
-                        {theme ? (
-                            theme === "themeL" ? (
-                                <img
-                                    ref={lr}
-                                    src={`${appData.darkLogo}`}
-                                    alt="logo"
-                                />
-                            ) : (
-                                <img
-                                    ref={lr}
-                                    src={`${appData.lightLogo}`}
-                                    alt="logo"
-                                />
-                            )
-                        ) : (
-                            <img
-                                ref={lr}
-                                src={`${appData.lightLogo}`}
-                                alt="logo"
-                            />
-                        )}
-                    </span>
+            <div className="container z-50 px-4">
+                <Link href="/" passHref>
+                    <NavbarLogo theme={theme} lr={lr} />
                 </Link>
 
-                <div>
+                <div className="hidden lg:block">
                     <ul className="navbar-nav flex flex-row gap-10">
                         {navbar.navItems.map((nav, i) => (
                             <li className="nav-item" key={i}>
                                 <Link href={nav.url} passHref>
-                                    <span className="nav-link">{nav.name}</span>
+                                    <span className="nav-link p-0">
+                                        {nav.name}
+                                    </span>
                                 </Link>
                             </li>
                         ))}
@@ -72,10 +35,22 @@ const Navbar = ({ lr, nr, theme }) => {
                         {/* Add Dark Mode & Light Mode Feature @s1rbl4ck */}
                     </div>
                 </div>
+                <div className="lg:hidden">
+                    <div className="menu-icon flex flex-row gap-5">
+                        <span className="icon">
+                            <i></i>
+                            <i></i>
+                        </span>
+                        <Split>
+                            <span className="text" data-splitting>
+                                <span className="menu-text">Menu</span>
+                            </span>
+                        </Split>
+                    </div>
+                </div>
             </div>
+            <NavbarFullMenu />
         </nav>
-    ) : (
-        <NavbarFullMenu />
     );
 };
 
