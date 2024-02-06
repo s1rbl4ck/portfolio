@@ -6,8 +6,8 @@ const DarkTheme = ({ children }) => {
   return (
     <>
       <Head>
-        {/* <link rel="stylesheet" href="/css/dark.css" /> */}
-        {/* <link rel="stylesheet" href="/css/styles.css" /> */}
+        <link rel="stylesheet" href="/css/dark.css" />
+        <link rel="stylesheet" href="/css/styles.css" />
       </Head>
       {children}
       
