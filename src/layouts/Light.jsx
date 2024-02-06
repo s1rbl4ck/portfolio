@@ -17,6 +17,7 @@ const LightTheme = ({ children, bdOn }) => {
     <>
       <Head>
         <link rel="stylesheet" href="/css/light.css" />
+        <link rel="stylesheet" href="/css/styles.css" />
       </Head>
       {children}
     </>
