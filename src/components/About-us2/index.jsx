@@ -47,7 +47,7 @@ const AboutUs2 = ({ skillsTheme }) => {
                   {desc}
                 </h3>
               </Split>
-              <p className="wow fadeInUp" data-wow-delay=".4s">
+              <p className="wow fadeInUp line-clamp-6" data-wow-delay=".4s">
                 {about}
               </p>
               <Split>
