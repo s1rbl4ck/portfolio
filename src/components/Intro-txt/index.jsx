@@ -6,7 +6,7 @@ const IntroTxt = ({subBG}) => {
   
   return (
     <header
-      className={`freelancer ${subBG ? "sub-bg" : ""} valign bg-img parallaxie`}
+      className={`freelancer ${subBG ? "sub-bg" : ""} valign bg-img parallaxie bg-bottom`}
       style={{ backgroundImage: "url(/img/slid/freelancer.jpg)" }}
       data-overlay-dark="4"
     >
